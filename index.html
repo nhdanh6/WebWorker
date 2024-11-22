@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Web Worker Examples</title>
+    <style>
+        /* Reset mặc định */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #4FACFE, #00F2FE);
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            font-weight: 300;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .link-card {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .card {
+            flex: 1 1 calc(50% - 20px);
+            min-width: 250px;
+            background: #f7f9fc;
+            border: 2px solid #e3e8ee;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .card h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #4FACFE;
+        }
+
+        .card p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        .card a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Phần Header -->
+        <div class="header">
+            <h1>HTML5 Web Worker</h1>
+            <p>Khám phá các ví dụ về Dedicated Worker, Shared Worker và Service Worker</p>
+        </div>
+
+        <!-- Phần Nội dung -->
+        <div class="content">
+            <div class="link-card">
+                <!-- Mỗi thẻ card là một liên kết -->
+                <div class="card">
+                    <a href="./VD_1/index.html">
+                        <h2>Web Worker Example</h2>
+                        <p>Ví dụ cơ bản về cách sử dụng Web Worker</p>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="./VD_2/index.html">
+                        <h2>Dedicated Worker</h2>
+                        <p>Xử lý các tác vụ độc lập bằng Dedicated Worker</p>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="./VD_3/index.html">
+                        <h2>Shared Worker</h2>
+                        <p>Chia sẻ dữ liệu giữa các tab với Shared Worker</p>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="./VD_4/index.html">
+                        <h2>Service Worker</h2>
+                        <p>Hỗ trợ offline và cải thiện hiệu năng với Service Worker</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
